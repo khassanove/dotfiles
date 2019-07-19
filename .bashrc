@@ -8,7 +8,9 @@ alias ls='ls --color=auto'
 PS1="\[\033[1;33m\][\[\033[0m\]\[\033[1;31m\]\u\[\033[0m\]\[\033[1;35m\]@\[\033[0m\]\[\033[1;34m\]\h\[\033[0m\]\[\033[1;32m\] \W\[\033[0m\]\[\033[1;33m\]]\[\033[0m\]\[\033[1;33m\]\$ \[\033[0m\]"
 
 (cat ~/.cache/wal/sequences &)
-neofetch
+#neofetch
+figlet Void Linux dwm 
+
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx 
 
 
