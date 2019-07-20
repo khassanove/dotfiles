@@ -9,7 +9,7 @@ PS1="\[\033[1;33m\][\[\033[0m\]\[\033[1;31m\]\u\[\033[0m\]\[\033[1;35m\]@\[\033[
 
 (cat ~/.cache/wal/sequences &)
 #neofetch
-figlet Void Linux dwm 
+figlet -c Void Linux dwm 
 
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx 
 
