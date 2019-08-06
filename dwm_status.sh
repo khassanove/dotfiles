@@ -11,14 +11,14 @@ sp2="$(echo -ne "${color0}|")"
 sp3="$(echo -ne "${color0}|")"
 
 print_torrent() {
-	torrent="$(transmission-remote -l | awk '/Sum:/ {print "DL"" "$5 " " "UP"" "$4}')"
+	torrent="$(transmission-remote -l | awk '/Sum:/ {print "下へ"" "$5 " " "上"" "$4}')"
   	echo -ne "${torrent}"
 }
 
 
 print_memory() {
 	memory="$(free -h | awk '/Mem:/ {print $3}')"
-  	echo -ne "Mem ${memory}"
+  	echo -ne "🐏 ${memory}"
 }
 
 #
@@ -30,17 +30,17 @@ print_memory() {
 
 print_sensor() {
 	sensor="$(sensors | awk '/Package id 0:/ {print $4}')"
-  	echo -ne "Temp ${sensor}"
+  	echo -ne " ${sensor}"
 }
 
 print_hddfree() {
   hddfree="$(df -Ph /dev/sda1 | awk '$3 ~ /[0-9]+/ {print $4}')"
-  echo -ne "SSD ${hddfree}"
+  echo -ne " ${hddfree}"
 }
 
 print_fan() {
 	fan="$(sensors | awk '/fan1:/ {print $2}')"
-  	echo -ne "FAN ${fan}"
+  	echo -ne "🌀 ${fan}"
 }
 
 
@@ -52,7 +52,7 @@ print_fan() {
       echo -e " OFF"
     elif [[ $mix == *\[on\]* ]]; then
       #green 9
-      echo -e "Vol ${vol}%"
+      echo -e " ${vol}%"
     else
       #yellow6
       echo -e "Vol ---"
@@ -74,7 +74,7 @@ while true; do
 
   # output vars
 print_cpu_used() {
-  printf "%-1b" "CPU ${cpu_used}%"
+  printf "%-1b" " ${cpu_used}%"
 #"%-10b" "${color7}CPU:${cpu_used}%"
 }
  
