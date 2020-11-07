@@ -1,0 +1,11 @@
+application;zathura %s
+image/pdf;zathura %s
+
+image/jpg;feh %s
+image/jpeg;feh %s
+image/gif;feh %s
+image/bmp;feh %s
+image/tiff;feh %s
+image/png;feh %s
+video/mp4;mpv %s
+text/html w3m -I %{charset} -T text/html; copiousoutput
